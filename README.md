@@ -1,6 +1,6 @@
 # Interactive OSINT Directory
 
-An interactive directory that transforms the curated `bookmarks.html` export into a searchable, filterable resource for OSINT practitioners.
+Interactive web application providing searchable access to 546+ curated OSINT (Open Source Intelligence) tools for OSINT practitioners.
 
 ## Features
 - Hierarchical navigation that mirrors the "OSINT Stack" bookmark structure with expandable tree view and breadcrumbs.
@@ -33,7 +33,40 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000/public/> in your browser.
 
-### 4. Run tests
+### 4. Deploy to Cloudflare Pages
+
+#### Option A: Git Integration (Recommended)
+1. Push your repository to GitHub/GitLab
+2. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/)
+3. Go to **Pages** → **Create a project** → **Connect to Git**
+4. Select your repository
+5. Configure build settings:
+   - **Build command**: `npm run build` (or leave empty if using static files)
+   - **Build output directory**: `app/dist` (or `public` for static deployment)
+   - **Root directory**: `/` (or `/app` if deploying the React app)
+
+#### Option B: Direct Upload
+1. Build your project locally:
+   ```bash
+   # For the React app
+   cd app
+   npm run build
+   
+   # Or for static files, just use the public directory
+   ```
+2. Go to **Cloudflare Pages** → **Upload assets**
+3. Drag and drop your `dist` folder (or `public` folder for static)
+4. Set a project name and deploy
+
+#### Environment Configuration
+For production deployments, you may want to:
+- Set up custom domains in the Pages settings
+- Configure redirects in `_redirects` file if needed
+- Enable analytics and security features
+
+Your OSINT Directory will be available at `https://your-project.pages.dev`
+
+### 5. Run tests
 Unit tests cover search scoring, filtering helpers, and shortlist state management:
 
 ```bash
