@@ -1,0 +1,171 @@
+.shortlist-view {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.shortlist-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  text-align: center;
+  gap: var(--spacing-md);
+  color: var(--color-text-secondary);
+  min-height: 400px;
+}
+
+.shortlist-empty svg {
+  color: var(--color-border);
+}
+
+.shortlist-empty h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.shortlist-empty p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 400px;
+}
+
+.shortlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.shortlist-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.btn-clear-shortlist {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--color-danger);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.btn-clear-shortlist:hover {
+  opacity: 0.9;
+}
+
+.btn-clear-shortlist:focus {
+  outline: 2px solid var(--color-danger);
+  outline-offset: 2px;
+}
+
+.shortlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.shortlist-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s;
+}
+
+.shortlist-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.shortlist-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.shortlist-card-header img {
+  object-fit: contain;
+}
+
+.shortlist-card-header h3 {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.shortlist-remove {
+  padding: var(--spacing-xs);
+  color: #f59e0b;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.shortlist-remove:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.shortlist-remove:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.shortlist-path {
+  font-size: 0.813rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.shortlist-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-top: auto;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.shortlist-actions .btn {
+  flex: 1;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .shortlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .shortlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shortlist-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-clear-shortlist {
+    width: 100%;
+    justify-content: center;
+  }
+}

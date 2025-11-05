@@ -1,0 +1,131 @@
+.tool-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.tool-list-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+.tool-card {
+  padding: var(--spacing-md);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tool-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.tool-card:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.tool-card.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.tool-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-secondary);
+}
+
+.tool-icon img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.tool-name {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.tool-shortlist-btn {
+  padding: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.tool-shortlist-btn:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-primary);
+}
+
+.tool-shortlist-btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.tool-shortlist-btn.active {
+  color: #f59e0b;
+}
+
+.tool-path {
+  font-size: 0.813rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
+.tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.tool-tag {
+  padding: 0.125rem 0.5rem;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tool-card {
+    padding: var(--spacing-sm);
+  }
+
+  .tool-name {
+    font-size: 0.938rem;
+  }
+
+  .tool-tags {
+    max-height: 50px;
+    overflow-y: auto;
+  }
+}

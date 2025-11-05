@@ -1,0 +1,123 @@
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md) 0;
+}
+
+.clear-filters {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-danger);
+  color: white;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  align-self: flex-start;
+}
+
+.clear-filters:hover {
+  opacity: 0.9;
+}
+
+.clear-filters:focus {
+  outline: 2px solid var(--color-danger);
+  outline-offset: 2px;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.filter-section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: opacity 0.2s;
+}
+
+.filter-section-header:hover {
+  opacity: 0.7;
+}
+
+.filter-section-header h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  flex: 1;
+}
+
+.active-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 var(--spacing-xs);
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.filter-chip {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.813rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.filter-chip:hover {
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-primary);
+}
+
+.filter-chip:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.filter-chip.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-panel {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .filter-chips {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}
