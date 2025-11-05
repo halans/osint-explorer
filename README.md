@@ -3,7 +3,7 @@
 Interactive web application providing searchable access to 546+ curated OSINT (Open Source Intelligence) tools for OSINT practitioners.
 
 ## Features
-- Hierarchical navigation that mirrors the "OSINT Stack" bookmark structure with expandable tree view and breadcrumbs.
+- Hierarchical navigation mirroring the "OSINT Stack" bookmstructure with expandable tree view and breadcrumbs.
 - Keyword search across tool names, category paths, and tags with inline highlighting of results.
 - Multi-select filters for top-level categories, subcategories, and tags.
 - Inline tool detail panel with quick actions to open the tool or copy the URL and a recommendations section for similar tools.
